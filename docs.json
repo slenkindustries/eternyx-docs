@@ -3,9 +3,9 @@
   "theme": "mint",
   "name": "Eternyx Wiki",
   "colors": {
-    "primary": "#f7ff00",
-    "light": "#f7ff00",
-    "dark": "#000"
+    "primary": "#ff6a00",
+    "light": "#ff6a00",
+    "dark": "#ff6a00"
   },
   "favicon": "/favicon.svg",
   "navigation": {
