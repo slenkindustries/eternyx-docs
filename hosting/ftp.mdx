@@ -1,4 +1,76 @@
 ---
-title: "FTP/SFTP"
-description: "Description of your new file."
+title: "SFTP"
+description: "V tomto návodu vám ukážeme, jak se připojit k SFTP na panelu herního serveru."
 ---
+
+<Steps>
+  <Step title="Stáhnutí klienta SFTP">
+    Stáhneme si instalátor s https://winscp.net/eng/download.php a spustíme ho.
+  </Step>
+  <Step title="Vytvoření klíče SSH">
+    Otevřete příkazový řádek, stiskněte `win+r` a do otevřeného okna zadejte `cmd` a stiskněte `enter`.
+
+    <img
+      src="/images/ftp-1.png"
+      alt="Ftp 1 Pn"
+      title="Ftp 1 Pn"
+      className="mx-auto"
+      style={{ width:"62%" }}
+    />
+
+    Po otevření příkazového řádku zadejte příkaz `ssh-keygen` a stiskněte klávesu `enter`. Pak se nás zeptá, kam chceme uložit vygenerovaný klíč, zkopírujeme tam výchozí cestu, v mém případě je to `C:\Users\Home/.ssh/id_ed25519` a přepíšeme `id_ed_25519` na `id_ed_eternyx`. Takže upravená cesta v mém případě vypadá takto: `C:\Users\Home/.ssh/id_ed_eternyx`. Vložte upravenou cestu a třikrát stiskněte `enter` a náš klíč je tu\!
+
+    <Tip>
+      Vo vätšine konzolových prostredí sa nepoužíva `ctrl+v` na prilepenie textu ale pravé tlačítko myši.
+    </Tip>
+    ![Ftp 2 Pn](/images/ftp-2.png)
+  </Step>
+  <Step title="Přidání klíče SSH do panelu">
+    Znovu otevřete `win + r` a nyní napište tam `notepad %USERPROFILE%\.ssh\id_ed_eternyx.pub` 
+
+    ![Ftp 3 Pn](/images/ftp-3.png)
+
+    Zkopírujeme celý tento text z poznámkového bloku a přejdeme na stránku https://panel.eternyx.cz/account/ssh, kde jej vložíme do pole `Public Key`. A náš klíč vhodně pojmenujeme. Nakonec klikneme na tlačítko `Create SSH Key`.
+
+    ![Ftp 4 Pn](/images/ftp-4.png)
+  </Step>
+  <Step title="Přidání klíče SSH do klienta SFTP">
+    Otevřete WinSCP. V okně `Prihlásenie` klikněte na tlačítko `Pokročilé`.
+
+    ![Ftp 5 Pn](/images/ftp-5.png)
+
+    Poté klikněte na tlačítko `Overovanie`.
+
+    ![Ftp 6 Pn](/images/ftp-6.png)
+
+    Do pole `Súbor s privátnym klúčom:` vložíme tento text `%USERPROFILE%\.ssh\id_ed_eternyx` 
+
+    ![Ftp 7 Pn](/images/ftp-7.png)
+
+    a stiskneme `enter`. Pak se objeví toto varování:
+
+    ![Ftp 8 Pn](/images/ftp-8.png)
+
+    ale není se čeho bát, stačí stisknout `Prerušiť`. Nyní stiskneme `Zobrazit veřejný klíč`
+
+    ![Ftp 9 Pn](/images/ftp-9.png)
+
+    dáme `OK` 
+
+    ![Ftp Pn](/images/ftp-.png)
+
+    poté klikněte na tlačítko `Uložiť` a znovu tlačítko `OK`.
+
+    ![Ftp 11 Pn](/images/ftp-11.png)
+
+    A pak ještě jednou `OK`.
+
+    ![Ftp 12 Pn](/images/ftp-12.png)
+
+    Zavřete okno `Pokročilé nastavenia lokality`. A otevřete administraci vašeho serveru Eternyx. Tam vybereme možnost `Settings` a na této stránce budeme pokračovat dolů, dokud neuvidíte část  `SFTP Details`. Dále zadáme údaje do okna `Prihlasovanie`.
+
+    ![Ftp 13 Pn](/images/ftp-13.png)
+
+    A jako poslední krok stiskněte tlačítko `Prihlásiť`.
+  </Step>
+</Steps>
