@@ -47,6 +47,17 @@
             ]
           }
         ]
+      },
+      {
+        "tab": "GTA-V/TX návody",
+        "groups": [
+          {
+            "group": "Všeobecné",
+            "pages": [
+              "gta/soon"
+            ]
+          }
+        ]
       }
     ],
     "global": {
