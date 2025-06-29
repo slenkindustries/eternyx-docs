@@ -31,18 +31,16 @@
         "tab": "Minecraft návody",
         "groups": [
           {
-            "group": "API Documentation",
+            "group": "Všeobecné",
             "pages": [
-              "api-reference/introduction"
+              "minecraft/vseobecne/whitelist.mdx"
             ]
           },
           {
-            "group": "Endpoint Examples",
+            "group": "Pluginy",
             "pages": [
-              "api-reference/endpoint/get",
-              "api-reference/endpoint/create",
-              "api-reference/endpoint/delete",
-              "api-reference/endpoint/webhook"
+              "minecraft/plugin/luckperms",
+              "minecraft/plugin/skyblock"
             ]
           }
         ]
