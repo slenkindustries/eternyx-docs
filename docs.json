@@ -65,12 +65,12 @@
         {
           "anchor": "Billing Panel",
           "href": "https://billing.eternyx.cz/",
-          "icon": "hand-coins"
+          "icon": "credit-card"
         },
         {
           "anchor": "Server Panel",
           "href": "https://panel.eternyx.cz/",
-          "icon": "layout-dashboard"
+          "icon": "gauge"
         }
       ]
     }
