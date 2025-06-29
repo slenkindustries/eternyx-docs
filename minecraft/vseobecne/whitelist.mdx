@@ -1,0 +1,51 @@
+---
+title: "Jak nastavit a používat whitelist na Minecraft serveru"
+description: "Jednoduchý návod, jak nastavit a spravovat whitelist na vašem Minecraft serveru pro omezení přístupu hráčů."
+---
+
+## **Co je whitelist?**
+
+Whitelist je seznam povolených hráčů, kteří se mohou připojit k vašemu serveru. Pokud je whitelist aktivní, pouze hráči na tomto seznamu se budou moci připojit.
+
+## **Aktivace whitelistu**
+
+### **Přes příkazy v konzoli nebo ve hře**
+
+- `/whitelist on` – Aktivuje whitelist
+- `/whitelist off` – Deaktivuje whitelist
+- `/whitelist list` – Zobrazí seznam všech hráčů na whitelistu
+- `/whitelist reload` – Znovu načte whitelist ze souboru (užitečné po ruční úpravě)
+
+### **Přes soubor server.properties**
+
+1. Otevřete soubor `server.properties` ve složce vašeho serveru
+2. Najděte řádek `white-list=false`
+3. Změňte jej na `white-list=true`
+4. Uložte soubor a restartujte server
+
+## **Správa hráčů na whitelistu**
+
+### **Přidání hráčů**
+
+- `/whitelist add <jméno_hráče>` – Přidá hráče na whitelist
+
+### **Odebrání hráčů**
+
+- `/whitelist remove <jméno_hráče>` – Odebere hráče z whitelistu
+
+<Warning>
+  Pokud používáte offline mode (neboli Warez), je možné, že bude třeba, aby se hráč nejprve připojil na server s vypnutým whitelistem, abyste ho mohli přidat.
+</Warning>
+
+## **Užitečné tipy**
+
+- **Whitelist a OP** – Hráči s OP právy se mohou připojit i bez whitelistu, pokud je nastaveno `enforce-whitelist=false` v server.properties
+- **Záloha whitelistu** – Je dobré pravidelně zálohovat soubor `whitelist.json` pro případ poškození
+
+## **Řešení problémů**
+
+- **Hráč se nemůže připojit** – Zkontrolujte, zda je jeho jméno správně napsáno (včetně velkých písmen)
+- **Whitelist nefunguje** – Ujistěte se, že je v server.properties nastaveno `white-list=true` a server byl restartován
+- **Změny se neprojevují** – Použijte příkaz `/whitelist reload` pro aktualizaci
+
+S těmito základními příkazy a nastaveními můžete efektivně kontrolovat, kdo má přístup k vašemu Minecraft serveru\!
