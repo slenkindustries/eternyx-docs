@@ -15,7 +15,7 @@ description: "V tomto návodu vám ukážeme, jak se připojit k SFTP na panelu 
       alt="Ftp 1 Pn"
       title="Ftp 1 Pn"
       className="mr-auto"
-      style={{ width:"100%" }}
+      style={{ width:"66%" }}
     />
 
     Po otevření příkazového řádku zadejte příkaz `ssh-keygen` a stiskněte klávesu `enter`. Pak se nás zeptá, kam chceme uložit vygenerovaný klíč, zkopírujeme tam výchozí cestu, v mém případě je to `C:\Users\Home/.ssh/id_ed25519` a přepíšeme `id_ed_25519` na `id_ed_eternyx`. Takže upravená cesta v mém případě vypadá takto: `C:\Users\Home/.ssh/id_ed_eternyx`. Vložte upravenou cestu a třikrát stiskněte `enter` a náš klíč je tu\!
@@ -28,7 +28,11 @@ description: "V tomto návodu vám ukážeme, jak se připojit k SFTP na panelu 
   <Step title="Přidání klíče SSH do panelu">
     Znovu otevřete `win + r` a nyní napište tam `notepad %USERPROFILE%\.ssh\id_ed_eternyx.pub`
 
-    ![Ftp 3 Pn](/images/ftp-3.png)
+    <img
+      src="/images/ftp-3.png"
+      alt="Ftp 3 Pn"
+      style={{ width:"69%" }}
+    />
 
     Zkopírujeme celý tento text z poznámkového bloku a přejdeme na stránku https://panel.eternyx.cz/account/ssh, kde jej vložíme do pole `Public Key`. A náš klíč vhodně pojmenujeme. Nakonec klikneme na tlačítko `Create SSH Key`.
 
