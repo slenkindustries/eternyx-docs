@@ -33,7 +33,9 @@
           {
             "group": "Všeobecné",
             "pages": [
-              "minecraft/vseobecne/obtiznost"
+              "minecraft/vseobecne/obtiznost",
+              "minecraft/vseobecne/whitelist",
+              "minecraft/vseobecne/worldborder"
             ]
           },
           {
