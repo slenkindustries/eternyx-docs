@@ -1,9 +1,9 @@
 {
   "$schema": "https://mintlify.com/docs.json",
   "theme": "mint",
-  "name": "Mint Starter Kit",
+  "name": "Eternyx Wiki",
   "colors": {
-    "primary": "#f7ff00",
+    "primary": "#ff6a00",
     "light": "#f7ff00",
     "dark": "#09090b"
   },
