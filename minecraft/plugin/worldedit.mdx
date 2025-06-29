@@ -1,0 +1,77 @@
+---
+title: "WorldEdit"
+description: "Jednoduchý návod jak nainstalovat, nastavit a používat WorldEdit plugin pro rychlé a efektivní úpravy světa v Minecraftu."
+---
+
+**WorldEdit** je nástroj, který vám umožní rychle upravovat bloky ve vašem Minecraft světě. Tento návod vám ukáže, jak jej nainstalovat a používat základní příkazy, abyste se mohli stát opravdovým builderem.
+
+## **Instalace WorldEditu**
+
+### **Pro Spigot/Paper server**
+
+1. Stáhněte si nejnovější verzi WorldEdit pluginu z [oficiálních stránek](https://dev.bukkit.org/projects/worldedit)
+2. Umístěte stažený soubor do složky **/plugins** vašeho serveru
+3. Restartujte server
+4. Ověřte instalaci příkazem `/we version`
+
+<Tip>
+  Pro opravdové buildery doporučujeme stáhnout [FastAsyncWorldEdit, neboli FAWE](https://hangar.papermc.io/IntellectualSites/FastAsyncWorldEdit), protože je výkonnější a disponuje více funkcemi.
+</Tip>
+
+### **Pro Fabric server**
+
+1. Nainstalujte [Fabric API](https://www.curseforge.com/minecraft/mc-mods/fabric-api)
+2. Stáhněte WorldEdit mod pro Fabric z [CurseForge](https://www.curseforge.com/minecraft/mc-mods/worldedit)
+3. Umístěte oba soubory do složky **/mods**
+4. Restartujte server
+
+## **Základní příkazy WorldEditu**
+
+### **Výběr oblasti**
+
+- `//wand` – Získáte nástroj pro výběr (dřevěná sekera)
+- `//pos1` – Nastaví první pozici výběru na místo, kde stojíte
+- `//pos2` – Nastaví druhou pozici výběru na místo, kde stojíte
+- `//hpos1` – Nastaví první pozici na blok, na který se díváte
+- `//hpos2` – Nastaví druhou pozici na blok, na který se díváte
+- `//sel` – Zobrazí informace o aktuálním výběru
+- `//desel` – Zruší aktuální výběr
+
+### **Úpravy bloků**
+
+- `//set <blok>` – Vyplní celý výběr zadaným blokem
+- `//replace <původní> <nový>` – Nahradí jeden typ bloku jiným
+- `//walls <blok>` – Vytvoří zdi kolem výběru
+- `//outline <blok>` – Vytvoří obrys výběru
+
+### **Kopírování a vkládání**
+
+- `//copy` – Zkopíruje výběr do schránky
+- `//paste` – Vloží obsah schránky
+- `//rotate <úhel>` – Otočí obsah schránky (90, 180, 270)
+- `//flip <směr>` – Převrátí obsah schránky
+
+## **Pokročilé nástroje**
+
+### **Štětce (Brushes)**
+
+Štětce umožňují upravovat bloky na dálku:
+
+- `//brush sphere <blok> <velikost>` – Vytvoří kouli
+- `//brush cylinder <blok> <poloměr> <výška>` – Vytvoří válec
+- `//brush smooth <velikost>` – Vyhladí terén
+
+### **Generování**
+
+- `//sphere <blok> <poloměr>` – Vytvoří kouli
+- `//cyl <blok> <poloměr> <výška>` – Vytvoří válec
+- `//pyramid <blok> <velikost>` – Vytvoří pyramidu
+
+## **Užitečné tipy**
+
+- `//undo` – Vrátí zpět poslední akci
+- `//redo` – Zopakuje vrácenou akci
+- `//move <vzdálenost> <směr>` – Přesune výběr
+- `//stack <počet> <směr>` – Zkopíruje výběr v daném směru několikrát
+
+S těmito základními příkazy můžete začít efektivně používat **WorldEdit** pro rychlé úpravy vašich Minecraft staveb\!
