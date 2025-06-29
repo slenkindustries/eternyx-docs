@@ -4,7 +4,7 @@
   "name": "Eternyx Wiki",
   "colors": {
     "primary": "#f7ff00",
-    "light": "#f7ff00",
+    "light": "#000",
     "dark": "#f7ff00"
   },
   "favicon": "/favicon.svg",
