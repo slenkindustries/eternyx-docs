@@ -35,7 +35,8 @@
             "pages": [
               "minecraft/vseobecne/obtiznost",
               "minecraft/vseobecne/whitelist",
-              "minecraft/vseobecne/worldborder"
+              "minecraft/vseobecne/worldborder",
+              "minecraft/vseobecne/smallcaps"
             ]
           },
           {
