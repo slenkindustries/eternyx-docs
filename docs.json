@@ -33,6 +33,7 @@
           {
             "group": "Všeobecné",
             "pages": [
+              "minecraft/vseobecne/optimalizace-serveru",
               "minecraft/vseobecne/obtiznost",
               "minecraft/vseobecne/whitelist",
               "minecraft/vseobecne/worldborder",
