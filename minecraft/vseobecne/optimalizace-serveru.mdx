@@ -1,0 +1,121 @@
+---
+title: "Jak optimalizovat Minecraft server a snížit lagy"
+description: "Kompletní návod jak optimalizovat Minecraft server, snížit lagy a zlepšit výkon pro Vanilla, Fabric, Spigot a Paper servery."
+---
+
+Minecraft server může běžet pomalu kvůli špatné optimalizaci. Tento návod vám pomůže snížit lagy a zepšit výkon.
+
+## **Optimalizace Vanilla serveru**
+
+Pokud používáte "vanilla" Minecraft server existuje několik klíčových nastavení, která můžete změnit:
+
+### **Nastavení v server.properties**
+
+- **view-distance** – Počet načtených chunků, doporučeno 6–8
+- **simulation-distance** – Počet načtených entit v okolí, doporučeno 4–6
+
+## **Optimalizace serveru s Fabric**
+
+### **Klíčové mody pro optimalizaci**
+
+- **Lithium** – Zrychluje fyziku, AI a výpočty serveru
+- **Starlight** – Optimalizace světla
+- **FerriteCore** – Snižuje využití RAM, ideální pro větší servery
+- **Spark** – Analyzuje výkon serveru, pomáhá najít a odstranit lagy způsobené entitami
+
+### **Další doporučení**
+
+- Také nezapomeňte správně nastavit **view-distance** a **simulation-distance**.
+
+## **Optimalizace Spigot/Paper serveru**
+
+Spigot a Paper jsou nejlepší volby pro váš server díky rozsáhlé optimalizaci.
+
+### **Nastavení v bukkit.yml**
+
+Snížení spawn limitů může pomoct, avšak počítejte se snížením efektivity vašich mobtrapek. Zde jsou dobře základní optimalizované hodnoty:
+
+```yml
+spawn-limits:
+  monsters: 20
+  animals: 5
+  water-animals: 2
+  water-ambient: 2
+  water-underground-creature: 3
+  axolotls: 3
+  ambient: 1
+```
+
+### **Nastavení v spigot.yml**
+
+Pokud máte problémy s výkonem, doporučujeme přepsat výchozí hodnoty na tyto, avšak počítejte s odlišným chováním mobtrapek.
+
+```yml
+# Vzdálenost v blocích, ze které budou entity viditelné.
+entity-tracking-range:
+  players: 48
+  animals: 48
+  monsters: 48
+  misc: 32
+  other: 64
+
+# Maximální vzdálenost od hráče, při které se entita bude hýbat.
+entity-activation-range:
+  animals: 16a
+  monsters: 24
+  raiders: 48
+  misc: 8
+  water: 8
+  villagers: 16
+  flying-monsters: 48
+```
+
+### **Nastavení v paper.yml**
+
+Další doporučená nastavení, která vám pomohou zlepšit výkon.
+
+```yml
+- use-faster-eigencraft-redstone: true # Zlepšuje výkon Redstone obvodů
+
+# Vzdálenost, ve které se entity začnou despawnovat
+- despawn-ranges:
+        hard: 72
+        soft: 30
+      axolotls:
+        hard: 72
+        soft: 30
+      creature:
+        hard: 72
+        soft: 30
+      misc:
+        hard: 72
+        soft: 30
+      monster:
+        hard: 72
+        soft: 30
+      undergroundwatercreature:
+        hard: 72
+        soft: 30
+      waterambient:
+        hard: 72
+        soft: 30
+      watercreature:
+        hard: 72
+
+- max-entity-collisions: 2 # Snižuje lagy z kolizí entit
+```
+
+### **Další doporučení**
+
+- **Purpur** – Nadstavba Paperu, lepší optimalizace
+- **FarmLimiter** – Snižuje počet entit ve farmách
+- **Spark** – Umožňuje detailní analýzu výkonu serveru a identifikaci problémových entit
+- **Chunky** – Předgeneruje chunky a zlepšuje výkon při načítání světa
+
+## **Další tipy**
+
+- **Pravidelné restarty** – Pomáhají uvolnit RAM a optimalizovat výkon.
+- **Žádné zbytečné pluginy** – Odstraňte nepoužívané nebo náročné pluginy.
+- **Vyhněte se velkým farmám** – Velké farmy s velkým počtem entit zvyšují zátěž serveru.
+
+S těmito kroky bude váš server běžet rychleji a bez lagů\! 🚀
