@@ -58,19 +58,19 @@
     "global": {
       "anchors": [
         {
-          "anchor": "Documentation",
-          "href": "https://mintlify.com/docs",
-          "icon": "book-open-cover"
+          "anchor": "Web",
+          "href": "https://eternyx.cz/",
+          "icon": "globe"
         },
         {
-          "anchor": "Community",
-          "href": "https://mintlify.com/community",
-          "icon": "slack"
+          "anchor": "Billing Panel",
+          "href": "https://billing.eternyx.cz/",
+          "icon": "hand-coins"
         },
         {
-          "anchor": "Blog",
-          "href": "https://mintlify.com/blog",
-          "icon": "newspaper"
+          "anchor": "Server Panel",
+          "href": "https://panel.eternyx.cz/",
+          "icon": "layout-dashboard"
         }
       ]
     }
