@@ -1,0 +1,35 @@
+---
+title: "Jak zakázat PvP na Minecraft serveru"
+description: "Jednoduchý návod, jak povolit/zakázat PvP souboje mezi hráči na Minecraft serveru pomocí úpravy souboru server.properties."
+---
+
+Na Minecraft serverech je PvP (hráč proti hráči) ve výchozím nastavení povoleno. Pokud chcete zabránit hráčům, aby si vzájemně ubližovali, můžete PvP jednoduše vypnout pomocí úpravy jednoho řádku v konfiguračním souboru.
+
+## Zakázání PvP
+
+<Steps>
+  <Step title="Najděte soubor server.properties">
+    Soubor `server.properties` se nachází ve složce vašeho Minecraft serveru.
+
+    ![Jak najít soubor server.properties](/images/Screenshot2025-07-20at13.03.05.png)
+  </Step>
+  <Step title="Otevřete soubor a najděte řádek:">
+    ```json server.properties
+    pvp=true
+    ```
+  </Step>
+  <Step title="Změňte hodnotu na:">
+    ```json server.properties
+    pvp=false
+    ```
+
+    Tím zamezíte tomu, aby si hráči mohli navzájem způsobovat poškození (hitovat se).
+
+    <Tip>
+      Změna platí pro celý svět. Pokud chcete PvP zakázat jen v určitých oblastech, doporučujeme použít pluginy jako WorldGuard.
+    </Tip>
+  </Step>
+  <Step title="Uložte změny a restartujte server">
+    Po změně soubor uložte a server restartujte, aby se nové nastavení projevilo.
+  </Step>
+</Steps>
