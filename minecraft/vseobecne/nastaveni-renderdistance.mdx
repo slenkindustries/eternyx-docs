@@ -1,0 +1,71 @@
+---
+title: "Nastavení vzdálenosti videní (Render Distance)"
+description: "Jednoduchý návod, jak změnit render distance (dohlednost) na vašem Minecraft serveru úpravou konfiguračního souboru server.properties."
+---
+
+Chcete zlepšit výkon vašeho Minecraft serveru nebo zvýšit dohlednost (render distance) hráčů? Pak je důležité porozumět dvěma klíčovým nastavením:
+
+- `Render distance (view-distance)` určuje, kolik chunků kolem hráče se vykreslí. Ovlivňuje to, jak daleko hráč _vidí_.
+- **`Simulation distance (simulation-distance)`** určuje, kolik chunků se skutečně _simuluje_ – např. pohyb mobů, redstone, růst rostlin apod.
+
+<Info>
+  Simulation distance má větší dopad na výkon serveru než render distance, protože simuluje aktivitu v každém chunku, nikoli pouze zobrazení.
+</Info>
+
+Nižší hodnoty pomáhají zlepšit výkon, zatímco vyšší hodnoty zajišťují realističtější a plynulejší herní zážitek. Tento návod vám ukáže, jak obě hodnoty správně nastavit.
+
+## **Změna render distance**
+
+<Steps>
+  <Step title="Najděte soubor server.properties">
+    Soubor `server.properties` se nachází ve složce vašeho Minecraft serveru. Tento soubor obsahuje většinu základních nastavení.
+  </Step>
+  <Step title="Otevřete soubor a najděte řádek:">
+    `view-distance=10`
+  </Step>
+  <Step title="Změňte hodnotu dle potřeby">
+    Hodnota představuje počet chunků, které se budou hráči načítat v každém směru.
+
+    **Doporučené hodnoty:**
+
+    - **6–10** pro běžné servery
+    - **4–6** pro servery s nižším výkonem
+    - **12\+** pro výkonné servery s malým počtem hráčů
+
+    <Warning>
+      Vyšší hodnoty render distance mohou výrazně zatížit výkon serveru a způsobit lagy, zvláště při více hráčích online.
+    </Warning>
+  </Step>
+  <Step title="Uložte soubor a restartujte server">
+    Po úpravě hodnoty soubor uložte a server restartujte, aby se změny projevily.
+
+    <Tip>
+      Při úpravě `server.properties` mějte server vypnutý, aby nedošlo ke ztrátě dat.
+    </Tip>
+  </Step>
+</Steps>
+
+## Změna simulation distance 
+
+<Info>
+  Nastavení `simulation-distance` je dostupné od verze Minecraft 1.18 a novější.
+</Info>
+
+<Steps>
+  <Step title="Najděte soubor server.properties">
+    Soubor `server.properties` se nachází ve složce vašeho Minecraft serveru.
+  </Step>
+  <Step title="Otevřete soubor a najděte řádek:">
+    `simulation-distance=10`
+  </Step>
+  <Step title="Nastavte hodnotu dle potřeby">
+    **simulation-distance** určuje, kolik chunků kolem hráče je aktivně simulováno (např. redstone, mobové, růst rostlin)
+
+    <Tip>
+      Simulation distance ovlivňuje zejména výkon serveru, zatímco render distance ovlivňuje hlavně vizuální stránku hry pro hráče.
+    </Tip>
+  </Step>
+  <Step title="Uložte změny a restartujte server">
+    Po úpravě hodnot soubor uložte a server restartujte, aby se změny projevily.
+  </Step>
+</Steps>
