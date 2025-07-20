@@ -35,6 +35,7 @@
             "pages": [
               "minecraft/vseobecne/optimalizace-serveru",
               "minecraft/vseobecne/nastaveni-renderdistance",
+              "minecraft/vseobecne/vypnuti-pvp",
               "minecraft/vseobecne/obtiznost",
               "minecraft/vseobecne/whitelist",
               "minecraft/vseobecne/worldborder",
