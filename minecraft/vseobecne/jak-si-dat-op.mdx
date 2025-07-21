@@ -1,0 +1,116 @@
+---
+title: "Jak si dát OP na Minecraft serveru"
+description: "Jednoduchý návod, jak si přidělit OP (administrátorská práva) na Minecraft serveru pomocí příkazu v konzoli nebo úpravou souboru ops.json."
+---
+
+Chcete mít plný přístup k příkazům a administraci na vašem Minecraft serveru? K tomu slouží tzv. **OP** práva (operator). Hráči s OP mohou používat příkazy jako `/gamemode`, `/ban`, `/tp`, nebo mají přístup k Creative módu.
+
+Tento návod vám ukáže, jak si OP práva jednoduše přidělit.
+
+## Získání OP práv
+
+<Steps>
+  <Step title="Otevřete konzoli serveru">
+    Pokud používáte hosting, otevřete webové rozhraní svého serveru a přejděte do **konzole**.
+
+    ![Screenshot2025 07 21at13 53 12 Pn](/images/Screenshot2025-07-21at13.53.12.png)
+  </Step>
+  <Step title="Zadejte příkaz pro přidání OP">
+    Do konzole napište následující příkaz a nahraďte `vaše_jméno` svým Minecraft jménem:
+
+    ```
+    op vaše_jméno
+    ```
+
+    Například:
+
+    ```
+    op Steve
+    ```
+
+    <Tip>
+      Příkaz musíte zadat z konzole, nebo z Minecraftu jako hráč, který už má OP práva.
+    </Tip>
+  </Step>
+  <Step title="Zkontrolujte, zda máte OP">
+    Připojte se na server a vyzkoušejte příkaz jako např.:
+
+    ```
+    /gamemode creative
+    ```
+
+    Pokud funguje, máte OP úspěšně nastavené.
+  </Step>
+</Steps>
+
+## Alternativně: Ruční úprava souboru `ops.json`
+
+<Steps>
+  <Step title="Najděte soubor `ops.json`">
+    Ve složce vašeho serveru najděte soubor `ops.json`. Tento soubor obsahuje seznam OP hráčů.
+  </Step>
+  <Step title="Přidejte svůj účet ve formátu:">
+    ```json
+    [
+      {
+        "uuid": "vaše-uuid",
+        "name": "vaše_jméno",
+        "level": 4,
+        "bypassesPlayerLimit": false
+      }
+    ]
+    ```
+
+    UUID si můžete najít na webu jako např. https://mcuuid.net
+
+    <Info>
+      Level 4 znamená plný přístup ke všem příkazům. Nižší levely mají omezené oprávnění.
+    </Info>
+  </Step>
+  <Step title="Uložte změny a restartujte server">
+    Po přidání uložte soubor `ops.json` a restartujte server, aby se změny projevily.
+  </Step>
+</Steps>
+
+## Základní příkazy pro OP hráče
+
+<AccordionGroup>
+  <Accordion title="Správa hráčů">
+    - `/kick <hráč>` – Vyhodí hráče ze serveru
+    - `/ban <hráč>` – Zablokuje hráče
+    - `/pardon <hráč>` – Odbanuje hráče
+    - `/op <hráč>` – Přidá hráče mezi operátory
+    - `/deop <hráč>` – Odebere OP práva
+  </Accordion>
+  <Accordion title="Teleportace a pozice">
+    - `/tp <cílový_hráč>` – Teleportuje vás k jinému hráči
+    - `/tp <hráč1> <hráč2>` – Teleportuje hráče k jinému hráči
+    - `/spawnpoint [hráč]` – Nastaví spawnpoint
+    - `/setworldspawn` – Nastaví globální spawn
+  </Accordion>
+  <Accordion title="Herní módy a počasí">
+    - `/gamemode <survival|creative|adventure|spectator>`
+    - `/difficulty <peaceful|easy|normal|hard>`
+    - `/weather <clear|rain|thunder>`
+    - `/time set <denní_doba>` (např. `day`, `night`, `1000`)
+  </Accordion>
+  <Accordion title="Příkazy pro správu světa">
+    - `/give <hráč> <položka> [množství]`
+    - `/summon <mob>` – Vyvolá entitu
+    - `/kill [cíl]` – Zabije entitu nebo hráče
+    - `/effect give <hráč> <efekt>` – Přidá efekt (např. rychlost, síla)
+    - `/enchant <hráč> <kouzlo> [úroveň]`
+  </Accordion>
+  <Accordion title="Další užitečné příkazy">
+    - `/save-all` – Uloží svět
+    - `/stop` – Vypne server
+    - `/say <zpráva>` – Odešle zprávu do chatu jako server
+    - `/whitelist` – Správa whitelistu (viz [návod](/navody/jak-nastavit-whitelist))
+  </Accordion>
+</AccordionGroup>
+
+<Warning>
+  S OP právy získáte plnou kontrolu nad svým serverem. Používejte je zodpovědně a OP dávejte pouze důvěryhodným hráčům\!
+</Warning>
+
+---
