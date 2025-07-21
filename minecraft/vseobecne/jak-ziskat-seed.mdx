@@ -1,0 +1,61 @@
+---
+title: "Jak zjistit seed světa na Minecraft serveru"
+description: "Jednoduchý návod, jak zobrazit nebo najít seed (generátor světa) na vašem Minecraft serveru pomocí příkazu nebo souboru level.dat."
+---
+
+**Seed** je číselný kód, který určuje, jak bude vygenerovaný svět v Minecraftu vypadat – krajina, biom, struktury apod. Pokud chcete vytvořit nový svět se stejným terénem, seed je klíčová informace.
+
+Tento návod vám ukáže, jak zjistit seed vašeho světa - ať už máte přístup ke hře, konzoli nebo jen k souborům serveru.
+
+## Zjištění seedu pomocí příkazu
+
+<Steps>
+  <Step title="Připojte se na server jako OP hráč">
+    Abyste mohli použít příkaz `/seed`, musíte mít OP práva. Pokud je nemáte, nejprve si je nastavte podle [tohoto návodu](/minecraft/vseobecne/jak-si-dat-op).
+  </Step>
+  <Step title="Napište příkaz do chatu nebo konzole">
+    ```
+    /seed
+    ```
+
+    Hra vám vypíše aktuální seed světa, např.:
+
+    ```
+    Seed: 125689789124798712
+    ```
+
+    <Tip>
+      Tento příkaz funguje pouze, pokud máte oprávnění (level 2\+ OP).
+    </Tip>
+  </Step>
+</Steps>
+
+## Alternativně: Zjištění seedu přes soubor `level.dat`
+
+<Steps>
+  <Step title="Otevřete složku se světem">
+    V kořenové složce serveru najděte složku vašeho světa, obvykle se jmenuje `world`, `world_nether` nebo `world_the_end`.
+  </Step>
+  <Step title="Najděte soubor `level.dat`">
+    Tento soubor obsahuje veškerá data o světě – včetně seedu.
+  </Step>
+  <Step title="Otevřete soubor pomocí NBT editoru">
+    K otevření souboru `level.dat` potřebujete speciální nástroj, jako je:
+
+    - [NBTExplorer (Windows/macOS/Linux)](https://github.com/jaquadro/NBTExplorer)
+
+    Otevřete soubor a najděte položku:
+
+    ```
+    Data → RandomSeed
+    ```
+
+    Tam uvidíte přesnou hodnotu seedu.
+
+    <Tip>
+      Tento postup je ideální, pokud nemáte přístup ke konzoli nebo OP právům.
+    </Tip>
+  </Step>
+</Steps>
+
+S tímto seedem si můžete vytvořit svět offline, analyzovat generování struktur (např. pomocí Amidst nebo Chunkbase), nebo znovu vytvořit svět na jiném serveru.
