@@ -1,0 +1,88 @@
+---
+title: "Jak nastavit spawnpoint na Minecraft serveru"
+description: "Jednoduchý návod, jak nastavit osobní nebo globální spawnpoint (world spawn) na Minecraft serveru pomocí příkazů."
+---
+
+Spawnpoint určuje místo, kde se hráč objeví po smrti nebo při prvním připojení na server. Minecraft umožňuje nastavit:
+
+- **Osobní spawnpoint** – specifický pro jednoho hráče
+- **Globální spawnpoint (world spawn)** – platný pro všechny nové hráče nebo ty, kteří nemají vlastní postel
+
+Tento návod vám ukáže, jak jednoduše změnit obě možnosti.
+
+## Nastavení globálního spawnu (`/setworldspawn`)
+
+<Steps>
+  <Step title="Připojte se na server s OP právy">
+    Abyste mohli používat příkaz `/setworldspawn`, musíte mít OP oprávnění. Pokud je nemáte, postupujte podle [návodu na získání OP](/minecraft/vseobecne/jak-si-dat-op).
+  </Step>
+  <Step title="Postavte se na místo, kde chcete nový spawn">
+    Spawnpoint se nastaví přesně na souřadnice, kde stojíte.
+  </Step>
+  <Step title="Použijte příkaz:">
+    ```
+    /setworldspawn
+    ```
+
+    Tím nastavíte nový globální spawn pro všechny hráče bez specifického respawn bodu.
+
+    <Tip>
+      Chcete-li nastavit spawn na konkrétní souřadnice, použijte:
+
+      ```
+      /setworldspawn <x> <y> <z>
+      ```
+    </Tip>
+  </Step>
+</Steps>
+
+## Úprava spawnovací oblasti (`spawnRadius`)
+
+Ve výchozím nastavení se hráči nemusí objevit přesně na `worldspawn` souřadnicích, ale náhodně v jeho okolí v určitém rádiusu.
+
+<Steps>
+  <Step title="Použijte příkaz:">
+    ```
+    /gamerule spawnRadius 0
+    ```
+
+    Tím zajistíte, že se hráči objeví **přesně** na nastaveném world spawnu.
+
+    <Info>
+      Výchozí hodnota je `10`, což znamená, že hráči se mohou spawnout až 10 bloků okolo nastaveného bodu. Pro přesné spawnování (např. na plošince nebo v lobby) doporučujeme nastavit `0`.
+    </Info>
+  </Step>
+</Steps>
+
+## Nastavení osobního spawnpointu (`/spawnpoint`)
+
+<Steps>
+  <Step title="Ujistěte se, že máte OP">
+    Tento příkaz lze použít pro sebe i pro jiné hráče, ale vyžaduje OP oprávnění.
+  </Step>
+  <Step title="Použijte příkaz pro sebe:">
+    ```
+    /spawnpoint
+    ```
+
+    Tento příkaz nastaví váš vlastní spawnpoint na aktuální pozici.
+
+    <Tip>
+      Pro nastavení spawnpointu jinému hráči použijte:
+
+      ```
+      /spawnpoint <hráč> <x> <y> <z>
+      ```
+    </Tip>
+  </Step>
+</Steps>
+
+## Jak zjistit aktuální spawn
+
+Chcete-li zjistit aktuální světový spawn, použijte příkaz:
+
+```
+/spawnpoint <hráč>
+```
+
+Minecraft vám zobrazí souřadnice aktuálního spawnpointu daného hráče.
