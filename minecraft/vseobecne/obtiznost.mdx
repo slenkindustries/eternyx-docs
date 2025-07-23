@@ -1,48 +1,104 @@
 ---
-title: "Změna obtížnosti hry"
-description: "Jednoduchý návod jak změnit obtížnost hry na Minecraft serveru úpravou souboru server.properties."
+title: "Jak změnit obtížnost hry na Minecraft serveru"
+description: "Jednoduchý návod, jak změnit obtížnost na Minecraft serveru pomocí souboru server.properties nebo příkazem přímo ve hře."
 ---
 
-Obtížnost hry na Minecraft serveru lze snadno změnit úpravou konfiguračního souboru. Tento návod vám ukáže, jak na to.
-
-## **Změna obtížnosti**
-
-1. **Najděte soubor server.properties** ve složce vašeho serveru
-2. **Otevřete soubor** a podívejte se na řádek `difficulty=1`
-3. **Změňte číslo** podle požadované obtížnosti:
-   - **0** → **Peaceful** _(Mírumilovné)_
-   - **1** → **Easy** _(Jednoduché)_
-   - **2** → **Normal** _(Normální)_
-   - **3** → **Hard** _(Těžké)_
-4. **Uložte soubor** a restartujte server
-
-<Tip>
-  Při manipulaci s souborem server.properties mějte server vypnutý.
-</Tip>
-
-## **Obtížnosti a jejich vlastnosti**
+Obtížnost hry v Minecraftu má přímý dopad na herní zážitek – ovlivňuje například spawnování nepřátel, jejich poškození, rychlost hladu nebo regeneraci zdraví. Minecraft nabízí čtyři úrovně obtížnosti:
 
 <AccordionGroup>
-  <Accordion title="Peaceful">
-    - Žádní nepřátelé se nespawnují
-    - Regenerace zdraví
-    - Hlad neklesá
+  <Accordion title="Peaceful (0)">
+    V režimu **Peaceful** (Mírumilovné) se jedná o nejklidnější herní prostředí. Hráči zde nejsou vystaveni žádnému nebezpečí.
+
+    - Nepřátelské moby se vůbec nespawnují (např. zombie, creepeři, skeletoni atd.)
+    - Hráči automaticky regenerují zdraví i bez jídla
+    - Ukazatel hladu neklesá
+    - Hráči nemohou zemřít hlady
+    - Z příkazu `/summon` se sice dá mob vyvolat, ale okamžitě zmizí
+
+    Tento režim je ideální pro kreativní stavění, malé děti nebo začátečníky.
   </Accordion>
-  <Accordion title="Easy">
-    - Méně nepřátel
-    - Menší poškození
-    - Hlad neklesá pod polovinu
+  <Accordion title="Easy (1)">
+    Obtížnost **Easy** (Jednoduchá) zavádí nepřátelské moby, ale stále drží hru na nízké úrovni obtížnosti.
+
+    - Nepřátelé se spawnují, ale způsobují méně poškození než v jiných obtížnostech
+    - Hráč nemůže zemřít hlady – ukazatel hladu klesne maximálně na 10 % (5 srdíček)
+    - Zombie se nesnaží rozbít dveře
+    - Infikování vesničanů zombiemi není smrtelné (mění se na normální zombie vesničany)
+
+    Tento režim je vhodný pro mírně zkušené hráče nebo přátelské servery.
   </Accordion>
-  <Accordion title="Normal">
-    - Standardní množství nepřátel
-    - Normální poškození
-    - Hlad může klesnout na půl srdce
+  <Accordion title="Normal (2)">
+    **Normal** (Normální) je vyvážená obtížnost pro většinu survival serverů.
+
+    - Nepřátelé způsobují běžné (vyvážené) poškození
+    - Hráč může zemřít hlady – ukazatel hladu klesá až na půl srdce
+    - Zombie mohou nakazit vesničany a změnit je na zombie vesničany
+    - Infikovaní vesničané potřebují lektvar slabosti a zlaté jablko pro vyléčení
+
+    Tento režim je doporučený pro hráče, kteří hledají klasický survival zážitek.
   </Accordion>
-  <Accordion title="Hard">
-    - Více nepřátel
-    - Vyšší poškození
-    - Hlad může způsobit smrt
+  <Accordion title="Hard (3)">
+    **Hard** (Těžký) režim nabízí největší výzvu. Vhodné pro zkušené hráče.
+
+    - Nepřátelské moby způsobují vyšší poškození a mají více životů
+    - Hráč může zemřít hlady (hladina hladu klesne až na 0 a způsobí smrt)
+    - Zombie se pokusí rozbít dveře a mají vyšší šanci spawnovat se s brněním/zbraněmi
+    - Vesničané napadení zombie se vždy změní na zombie vesničany
+    - Na hardcore mapách nelze změnit obtížnost zpět
+
+    Hard je ideální pro hráče, kteří hledají intenzivní a náročný herní zážitek.
   </Accordion>
 </AccordionGroup>
 
-Po restartování serveru by jste měli pocítit změny v obtížnosti hry.
+## Změna obtížnosti přes server.properties
+
+<Steps>
+  <Step title="Najděte soubor server.properties">
+    Ve složce vašeho Minecraft serveru najděte konfigurační soubor `server.properties`.
+
+    ![Kde najít server.properties](/images/Screenshot2025-07-20at13.03.05.png)
+  </Step>
+  <Step title="Otevřete soubor a najděte řádek:">
+    ```properties
+    difficulty=1
+    ```
+
+    Tento řádek určuje aktuální obtížnost serveru.
+  </Step>
+  <Step title="Změňte hodnotu podle požadované obtížnosti">
+    Například:
+
+    ```properties
+    difficulty=2
+    ```
+
+    <Info>
+      Hodnoty:
+
+      - 0 = peaceful
+      - 1 = easy
+      - 2 = normal
+      - 3 = hard
+    </Info>
+  </Step>
+  <Step title="Uložte soubor a restartujte server">
+    Po úpravě souboru ho uložte a restartujte server, aby se změna projevila.
+
+    <Tip>
+      Při úpravách souboru server.properties doporučujeme mít server vypnutý.
+    </Tip>
+  </Step>
+</Steps>
+
+---
+
+## Změna obtížnosti pomocí příkazu
+
+Pokud jste Operátor nebo máte přístup ke konzoli, můžete obtížnost změnit příkazem:
+
+```
+/difficulty normal
+```
+<Info>
+Tato změna se projeví okamžitě a nevyžaduje restart serveru.
+</Info>
