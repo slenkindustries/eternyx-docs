@@ -1,0 +1,46 @@
+---
+title: "Jak povolit Command Blocky na Minecraft serveru"
+description: "Jednoduchý návod, jak povolit command blocky na vašem Minecraft serveru úpravou souboru server.properties."
+---
+
+Command blocky (příkazové bloky) jsou výkonný nástroj pro tvorbu automatizovaných příkazů, miniher, map a pokročilých mechanik. Ve výchozím nastavení jsou na serverech zakázané, ale jejich aktivace je velmi snadná.
+
+## Povolení command blocků
+
+<Steps>
+  <Step title="Najděte soubor server.properties">
+    Ve složce vašeho Minecraft serveru najděte konfigurační soubor `server.properties`.
+
+    ![Kde najít soubor server.properties](/images/Screenshot2025-07-20at13.03.05.png)
+  </Step>
+  <Step title="Otevřete soubor a najděte řádek:">
+    ```
+    enable-command-block=false
+    ```
+  </Step>
+  <Step title="Změňte hodnotu na:">
+    ```
+    enable-command-block=true
+    ```
+
+    Tím povolíte používání příkazových bloků na serveru.
+
+    <Warning>
+      Příkazové bloky mohou spouštět všechny příkazy – ujistěte se, že jim důvěřujete, zvláště pokud na serveru běží adventure mapy nebo je mají hráči přístupné.
+    </Warning>
+  </Step>
+  <Step title="Uložte změny a restartujte server">
+    Po změně soubor uložte a proveďte restart serveru, aby se nové nastavení projevilo.
+  </Step>
+</Steps>
+
+## Jak získat command block ve hře
+
+Command block nelze získat běžně přes inventář. Musíte použít příkaz:
+
+```
+/give <vaše_jméno> minecraft:command_block
+```
+<Tip>
+  K použití tohoto příkazu musíte mít OP práva. Postup pro jejich nastavení najdete v našem návodu [Jak si dát OP](/navody/jak-si-dat-op).
+</Tip>
