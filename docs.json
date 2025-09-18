@@ -43,7 +43,8 @@
               "minecraft/vseobecne/obtiznost",
               "minecraft/vseobecne/whitelist",
               "minecraft/vseobecne/worldborder",
-              "minecraft/vseobecne/smallcaps"
+              "minecraft/vseobecne/smallcaps",
+              "minecraft/vseobecne/zmena-seedu"
             ]
           },
           {
